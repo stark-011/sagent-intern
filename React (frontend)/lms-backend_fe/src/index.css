@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Work Sans", "Segoe UI", sans-serif;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(43, 150, 93, 0.13), transparent 35%),
+      radial-gradient(circle at 100% 0%, rgba(249, 143, 7, 0.13), transparent 30%),
+      linear-gradient(180deg, #f6fbf8 0%, #ffffff 45%, #fff9ee 100%);
+    color: #0f172a;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Space Grotesk", "Work Sans", sans-serif;
+  }
+}
+
+@layer components {
+  .bg-surface {
+    background:
+      radial-gradient(circle at 8% -12%, rgba(43, 150, 93, 0.12), transparent 38%),
+      radial-gradient(circle at 88% -6%, rgba(249, 143, 7, 0.12), transparent 30%),
+      linear-gradient(180deg, #f4faf7 0%, #ffffff 55%, #fff7ea 100%);
+  }
+
+  .panel {
+    @apply rounded-2xl border border-brand-100 bg-white/90 p-5 shadow-soft backdrop-blur;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-brand-200 bg-white px-4 py-2 text-sm font-semibold text-brand-700 transition hover:bg-brand-50 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center rounded-lg bg-rose-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-brand-100 bg-white px-3 py-2 text-sm text-slate-800 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100;
+  }
+
+  .label {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+}

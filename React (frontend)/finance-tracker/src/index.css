@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", "Segoe UI", "Tahoma", sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(20, 184, 166, 0.16), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(249, 115, 22, 0.16), transparent 32%),
+    #f3f8f8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Toastify__toast {
+  border-radius: 10px;
+  font-family: "Plus Jakarta Sans", "Segoe UI", "Tahoma", sans-serif;
+}

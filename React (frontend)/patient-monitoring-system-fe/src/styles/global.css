@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --app-bg: #f4f7fb;
+  --text-link: #0f766e;
+  --text-link-hover: #115e59;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% -20%, rgba(45, 212, 191, 0.2), transparent 35%),
+    radial-gradient(circle at 95% 10%, rgba(56, 189, 248, 0.16), transparent 30%),
+    var(--app-bg);
+  color: #0f172a;
+}
+
+.app-fade-in {
+  animation: appFadeIn 0.45s ease;
+}
+
+.card-fade-in {
+  animation: cardFadeIn 0.36s ease;
+}
+
+.text-link {
+  color: var(--text-link);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  color: var(--text-link-hover);
+  text-decoration: underline;
+}
+
+@keyframes appFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

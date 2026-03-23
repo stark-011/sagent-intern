@@ -1,0 +1,402 @@
+:root {
+  --primary: #0b57d0;
+  --primary-dark: #0845a6;
+  --secondary: #e8f1ff;
+  --bg: #f5f9ff;
+  --white: #ffffff;
+  --text: #13304f;
+  --muted: #5d7590;
+  --danger: #d93025;
+  --success: #137333;
+  --border: #d7e6ff;
+  --shadow: 0 12px 30px rgba(12, 63, 136, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #dcebff 0%, var(--bg) 45%, #eef6ff 100%);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--secondary);
+  color: var(--primary-dark);
+}
+
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.auth-wrapper {
+  min-height: calc(100vh - 120px);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 28px;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 6px 0 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #bdd3f7;
+  border-radius: 10px;
+  padding: 11px 12px;
+  background: #fcfeff;
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(11, 87, 208, 0.14);
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #1a6df5, var(--primary));
+  color: var(--white);
+}
+
+.btn-outline {
+  background: var(--white);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: var(--white);
+}
+
+.btn-success {
+  background: var(--success);
+  color: var(--white);
+}
+
+.alert {
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+}
+
+.alert.error {
+  background: #ffe8e6;
+  color: #8d1810;
+  border: 1px solid #ffc9c4;
+}
+
+.alert.success {
+  background: #e8f7ec;
+  color: #12552b;
+  border: 1px solid #bae2c7;
+}
+
+.auth-footnote {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.loading-state,
+.loading-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #c7d7f3;
+  border-top-color: var(--primary);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.application-card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e3edff;
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.status-pill.under_review,
+.status-pill.under-review {
+  background: #fff2cc;
+  color: #7a5900;
+}
+
+.status-pill.accepted {
+  background: #ddf4e4;
+  color: #175a32;
+}
+
+.status-pill.rejected {
+  background: #ffe3e1;
+  color: #7f1c14;
+}
+
+.empty-card {
+  padding: 18px;
+  text-align: center;
+}
+
+.form-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-track {
+  height: 10px;
+  background: #e2ecff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4b8eff, #0b57d0);
+  transition: width 0.25s ease;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-box {
+  border: 1px dashed #a4c2ef;
+  border-radius: 12px;
+  padding: 12px;
+  background: #f8fbff;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  padding: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #dce9ff;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f1f6ff;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.empty-row {
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .auth-card {
+    padding: 20px;
+  }
+
+  .app-shell {
+    padding: 16px 12px 28px;
+  }
+
+  .form-card {
+    padding: 16px;
+  }
+}
