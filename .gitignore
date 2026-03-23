@@ -1,0 +1,29 @@
+# Editor files
+.idea/
+.vscode/
+*.iml
+
+# Logs and runtime output
+*.log
+*.out
+*.err
+*.stackdump
+
+# Frontend artifacts
+node_modules/
+dist/
+
+# Java build artifacts
+target/
+build/
+
+# Local env overrides
+.env
+.env.local
+.env.*.local
+
+# Project-specific local files
+parking spot booking/backend/.tools/
+parking spot booking/backend/.last_reg_email.txt
+parking spot booking/backend/data/*.db
+parking spot booking/backend/data/*.trace.db

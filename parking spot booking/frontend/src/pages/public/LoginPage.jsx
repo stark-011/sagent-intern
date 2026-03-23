@@ -35,7 +35,7 @@ const LoginPage = () => {
     const presets = {
       driver: { email: "user@example.com", password: "Password@123", role: "driver" },
       lender: { email: "lender@example.com", password: "Password@123", role: "lender" },
-      admin: { email: "sabariwithcoc@gmail.com", password: "Password@123", role: "admin" },
+      admin: { email: "admin@example.com", password: "Password@123", role: "admin" },
     };
     setForm(presets[role]);
   };

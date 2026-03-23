@@ -7,3 +7,7 @@ JWT_SECRET=ReplaceWithAtLeast256BitSecretKeyForLocalDevOnlyChangeMe1234567890
 JWT_EXPIRATION_MS=86400000
 CORS_ALLOWED_ORIGIN_PATTERNS=http://localhost:*,http://127.0.0.1:*
 APP_SEED_ENABLED=false
+
+# Optional: required only for OTP/password reset emails
+MAIL_USERNAME=your-email@example.com
+MAIL_PASSWORD=your-app-password

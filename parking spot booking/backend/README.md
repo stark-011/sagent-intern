@@ -20,6 +20,8 @@ Spring Boot backend for the Parking Spot Finder frontend.
    - `DB_URL=jdbc:mysql://localhost:3306/parking_spot_finder_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Kolkata&characterEncoding=UTF-8`
    - `DB_USERNAME=root`
    - `DB_PASSWORD=123456789`
+   - `MAIL_USERNAME=your-email@example.com` (optional, only for OTP/password reset emails)
+   - `MAIL_PASSWORD=your-app-password` (optional, only for OTP/password reset emails)
 2. Start backend:
    - `mvn spring-boot:run`
 3. Start frontend separately from `../frontend`:
@@ -104,3 +106,4 @@ Swagger UI: `/swagger-ui.html`
 - Schema auto-updates with `spring.jpa.hibernate.ddl-auto=update`.
 - Seed data is disabled by default. Set `APP_SEED_ENABLED=true` to load demo data.
 - CORS origin patterns are configurable via `CORS_ALLOWED_ORIGIN_PATTERNS` (default allows localhost/127.0.0.1 on any port).
+- Mail credentials are not committed. Provide `MAIL_USERNAME` and `MAIL_PASSWORD` only if you want OTP/password reset emails to work locally.

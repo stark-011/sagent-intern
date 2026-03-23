@@ -5,6 +5,7 @@ import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
@@ -16,17 +17,23 @@ import org.springframework.stereotype.Service;
 public class EmailServiceImpl implements EmailService {
 
     private final JavaMailSender mailSender;
+    @Value("${spring.mail.username:}")
+    private String fromEmail;
 
     @Override
     @Async
     public void sendOtpEmail(String toEmail, String otp) {
         try {
+            if (fromEmail == null || fromEmail.isBlank()) {
+                throw new IllegalStateException("MAIL_USERNAME must be configured to send OTP emails");
+            }
+
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-            helper.setFrom("sabariwithcoc@gmail.com", "Parking Spot Finder");
+            helper.setFrom(fromEmail, "Parking Spot Finder");
             helper.setTo(toEmail);
-            helper.setSubject("Password Reset OTP – Parking Spot Finder");
+            helper.setSubject("Password Reset OTP - Parking Spot Finder");
             helper.setText(buildOtpHtml(otp), true);
 
             mailSender.send(message);
@@ -60,7 +67,7 @@ public class EmailServiceImpl implements EmailService {
             <body>
               <div class="container">
                 <div class="header">
-                  <h1>🔒 Password Reset</h1>
+                  <h1>Password Reset</h1>
                 </div>
                 <div class="body">
                   <p>We received a request to reset your password. Use the OTP below to proceed.</p>
