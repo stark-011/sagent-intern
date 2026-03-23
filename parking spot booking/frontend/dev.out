@@ -1,0 +1,31 @@
+
+> parking-spot-finder@1.0.0 dev
+> vite --host 127.0.0.1 --port 5173
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m308[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m11:29:53 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/maps/ParkingMap.jsx, /src/index.css[22m
+[2m12:46:45 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/forms/SpotForm.jsx, /src/index.css[22m
+[2m12:47:17 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/lender/AddSpotPage.jsx, /src/pages/public/HomePage.jsx, /src/pages/lender/LenderSpotDetailsPage.jsx, /src/pages/public/SpotDetailsPage.jsx, /src/pages/admin/PricingRulesPage.jsx, /src/pages/lender/EditSpotPage.jsx, /src/pages/public/SearchPage.jsx[22m
+[2m12:47:44 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminUsersPage.jsx, /src/pages/admin/ReportsPage.jsx, /src/pages/admin/PendingApprovalsPage.jsx, /src/pages/admin/AdminAllSpotsPage.jsx, /src/pages/admin/PricingRulesPage.jsx, /src/pages/admin/AdminDashboardPage.jsx, /src/pages/admin/ApprovalDetailsPage.jsx[22m
+[2m12:47:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/PendingApprovalsPage.jsx, /src/index.css[22m
+[2m12:48:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/PendingApprovalsPage.jsx, /src/index.css[22m
+[2m12:48:50 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/ApprovalDetailsPage.jsx, /src/index.css[22m
+[2m12:48:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/lender/LenderSpotsPage.jsx, /src/index.css[22m
+[2m12:49:04 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/lender/LenderSpotDetailsPage.jsx, /src/index.css[22m
+[2m12:49:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/lender/AddSpotPage.jsx, /src/index.css[22m
+[2m12:49:17 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/lender/EditSpotPage.jsx, /src/index.css[22m
+[2m12:49:32 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/PendingApprovalsPage.jsx, /src/index.css[22m
+[2m12:49:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/lender/LenderSpotDetailsPage.jsx, /src/index.css[22m
+[2m12:49:50 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/ApprovalDetailsPage.jsx, /src/index.css[22m
+[2m12:49:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/lender/AddSpotPage.jsx, /src/pages/public/HomePage.jsx, /src/pages/lender/LenderSpotDetailsPage.jsx, /src/pages/public/SpotDetailsPage.jsx, /src/pages/admin/PricingRulesPage.jsx, /src/pages/lender/EditSpotPage.jsx, /src/pages/public/SearchPage.jsx[22m
+[2m12:50:03 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/user/BookingDetailsPage.jsx, /src/pages/user/UserBookingsPage.jsx, /src/pages/public/SpotDetailsPage.jsx, /src/pages/user/ReviewsPage.jsx, /src/pages/user/UserDashboardPage.jsx[22m
+[2m12:50:16 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/PricingRulesPage.jsx, /src/index.css[22m
+[2m2:17:03 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mfrontend/dist/index.html[22m
+[2m2:17:06 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mfrontend/index.html[22m
+[2m2:17:06 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m2:17:06 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mtailwind.config.js[22m
+[2m2:17:06 pm[22m [36m[1m[vite][22m[39m [32mvite.config.js changed, restarting server...[39m
+[2m2:17:06 pm[22m [36m[1m[vite][22m[39m server restarted.

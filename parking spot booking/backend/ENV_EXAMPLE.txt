@@ -1,0 +1,9 @@
+# Local environment reference
+# Backend is configured for database server persistence only (no file DB fallback).
+DB_URL=jdbc:mysql://localhost:3306/parking_spot_finder_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Kolkata&characterEncoding=UTF-8
+DB_USERNAME=root
+DB_PASSWORD=123456789
+JWT_SECRET=ReplaceWithAtLeast256BitSecretKeyForLocalDevOnlyChangeMe1234567890
+JWT_EXPIRATION_MS=86400000
+CORS_ALLOWED_ORIGIN_PATTERNS=http://localhost:*,http://127.0.0.1:*
+APP_SEED_ENABLED=false
