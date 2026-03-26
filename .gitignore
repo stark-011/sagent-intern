@@ -23,7 +23,7 @@ build/
 .env.*.local
 
 # Project-specific local files
-parking spot booking/backend/.tools/
-parking spot booking/backend/.last_reg_email.txt
-parking spot booking/backend/data/*.db
-parking spot booking/backend/data/*.trace.db
+parking spot booking (final project)/backend/.tools/
+parking spot booking (final project)/backend/.last_reg_email.txt
+parking spot booking (final project)/backend/data/*.db
+parking spot booking (final project)/backend/data/*.trace.db
